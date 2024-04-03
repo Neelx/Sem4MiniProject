@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('Desktop/iStock-1253713039-Household-Items-You-Can-Get-Paid-to-Recycle.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            font-weight: bold;
+        }
+        
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        textarea {
+            height: 100px;
+        }
+        
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        
+        #message {
+            color: red;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Feedback Form</h2>
+        <form id="feedbackForm" method="post" action="AP.PHP">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <input type="submit" value="Submit">
+            <p id="message"></p>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById('feedbackForm');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const messageInput = document.getElementById('message');
+        const message = document.getElementById('message');
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            let isValid = true;
+            message.textContent = '';
+
+            // Check name is not empty
+            if (nameInput.value === '') {
+                message.textContent = 'Please enter your name.';
+                isValid = false;
+            }
+
+            // Check email is valid format
+            if (!emailInput.value.match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)) {
+                message.textContent = 'Please enter a valid email address.';
+                isValid = false;
+            }
+
+            // Check feedback is not empty
+            if (messageInput.value === '') {
+                message.textContent = 'Please enter your feedback.';
+                isValid = false;
+            }
+
+            if (isValid) {
+                // Simulate form submission (replace with your actual submission logic)
+                alert('Thank you for your feedback!');
+                form.submit();
+            }
+        });
+    </script>
+</body>
+
+</html>

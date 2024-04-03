@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Popins', sans-serif;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding: 5%;
+    background-image: linear-gradient(rgb(0,8,51,0.9), rgb(0,8,51,0.9)), url(main.jpeg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.search-bar{
+    width: 100%;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+    backdrop-filter: blur(4px) saturate(180%);
+}
+.search-bar input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 20px;
+    color: #cac7ff;
+
+}
+::placeholder{
+    color: #cac7ff;
+}
+.search-bar button img{
+    width: 25px;
+}
+.search-bar button{
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: #58729b;
+    cursor: pointer;
+}
+
+.main {
+    position: relative;
+    overflow: hidden;
+}
+
+.page1 {
+    height: 100vh;
+    width: 100vw;
+    background-color: red;
+    position: relative;
+}
+
+.page1 > video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.page1 > nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    height: 12vh;
+    width: 100vw;
+    background-color: black;
+    position: absolute;
+}
+
+.page1 > nav > img {
+    height: 100%;
+}
+.navbar-links{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.navbar-links li {
+    margin-right: 20px;
+    justify-content: space-between;
+    padding: 30px;
+  }
+  
+  .navbar-links li:last-child {
+    margin-right: auto;
+  }
+  
+  .navbar-links a {
+    text-decoration: none;
+    color:white; /* Change this to your desired link color */
+    font-weight: bold;
+    transition: color 0.3s ease;
+    
+  }
+  
+  .navbar-links a:hover{
+    color: yellow; /* Change this to the color you want when hovered */
+  }
+  
+.right-nav > button {
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px solid white;
+    font-family: a;
+    font-size: 12px;
+}

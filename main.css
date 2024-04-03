@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.banner{
+
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: url(bgcar.jpeg);
+}
+.content{
+    color:#38A3A5;
+    text-align: center;
+    padding-top: 280px;
+    font-family: Georgia;
+}
+h1{
+    font-size: 70px;
+}
+p{
+    margin-top: 4px;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    
+    
+}
+a{
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    font-family: Verdana;
+}
+button{
+    font-family:Verdana ;
+    font-size: 18px;
+    border-radius: 18px;
+    height: 40px;
+    width: 10%;
+    background-color: rgba(0,0,0,0);
+    color: white;
+    border-style: solid;
+    border-color:#fff;
+    margin-inline: 10px;
+    cursor:pointer;
+    
+}
+.btn:hover{
+    color: blue;
+
+}
+button:hover{
+    background-color: rgba(41, 143, 239, 0.819);
+    color: black;
+}
